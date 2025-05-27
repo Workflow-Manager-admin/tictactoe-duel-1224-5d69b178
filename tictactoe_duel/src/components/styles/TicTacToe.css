@@ -1,0 +1,49 @@
+.tictactoe-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.game-status {
+  margin: 20px 0;
+  font-size: 1.5rem;
+  color: var(--text-color);
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 20px 0;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: var(--kavia-dark);
+  border: 2px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+  color: var(--text-color);
+}
+
+.cell:hover {
+  border-color: var(--kavia-orange);
+}
+
+.cell.winner {
+  background-color: rgba(232, 122, 65, 0.2);
+  border-color: var(--kavia-orange);
+}
+
+.reset-button {
+  margin-top: 20px;
+}
